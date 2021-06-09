@@ -5,6 +5,16 @@ import styled from "styled-components";
 export const StyledHeaderDiv = styled.div`
   width: 100vw;
   height: 50px;
+  .ant-menu {
+    display: flex;
+    .ant-menu-item {
+      display: flex;
+      align-items: center;
+      .ant-image {
+        margin-right: 15px;
+      }
+    }
+  }
 `;
 const Header = ({ location, routes }) => {
   const [current, setCurrent] = useState(location.pathname);

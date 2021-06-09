@@ -51,7 +51,7 @@ const StyledImgDiv = styled.div`
 const Photos = () => {
   const callback = () => {};
   return (
-    <Tabs defaultActiveKey="1" onChange={callback}>
+    <Tabs defaultActiveKey="1" onChange={callback} tabPosition="left">
       <TabPane tab="Life" key="life">
         <StyledColumnDiv>
           {lifeImages.map((item, idx) => (
