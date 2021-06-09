@@ -33,8 +33,8 @@ const StyledLab = styled.div`
           props.isLight === null
             ? "null"
             : props.isLight
-            ? "light 500ms ease-in 100ms forwards"
-            : "crush 500ms ease-out 100ms backwards"};
+            ? "light 500ms ease-in 200ms forwards"
+            : "crush 500ms ease-out 50ms backwards"};
       }
     }
   }
@@ -80,6 +80,7 @@ const StyledLab = styled.div`
   @keyframes light {
     from {
       background: transparent;
+      box-shadow: 0 0 0 0 rgb(255 255 0 / 0%);
     }
     to {
       background: linear-gradient(
@@ -106,6 +107,7 @@ const StyledLab = styled.div`
     }
     to {
       background: transparent;
+      box-shadow: 0 0 0 0 rgb(255 255 0 / 0%);
     }
   }
 `;
