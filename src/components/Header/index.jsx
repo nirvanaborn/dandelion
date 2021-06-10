@@ -7,6 +7,7 @@ export const StyledHeaderDiv = styled.div`
   height: 50px;
   .ant-menu {
     display: flex;
+    box-shadow: 0px 2px 5px 10px #eee;
     .ant-menu-item {
       display: flex;
       align-items: center;

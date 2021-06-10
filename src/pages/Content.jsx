@@ -7,6 +7,7 @@ export const StyledContentDiv = styled.div`
   width: 100vw;
   height: calc(100vh - 50px);
   overflow: hidden auto;
+  background: #ececec;
   &::-webkit-scrollbar {
     width: 5px;
     background-color: #fff; /* or add it to the track */
