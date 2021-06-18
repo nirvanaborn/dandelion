@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
-import { Tabs } from "antd";
+import { Tabs, Image } from "antd";
 import Img from "react-cool-img";
 import styled from "styled-components";
 import fineFoodImages from "../../assets/images/FineFood";
@@ -9,19 +9,19 @@ import sceneryImages from "../../assets/images/Scenery";
 const { TabPane } = Tabs;
 const StyledColumnDiv = styled.div`
   margin: 10px;
-  column-count: 8;
+  column-count: 5;
   column-gap: 20px;
   @media (max-width: 1200px) {
-    column-count: 8;
-  }
-  @media (max-width: 992px) {
-    column-count: 6;
-  }
-  @media (max-width: 768px) {
     column-count: 5;
   }
-  @media (max-width: 480px) {
+  @media (max-width: 992px) {
+    column-count: 4;
+  }
+  @media (max-width: 768px) {
     column-count: 3;
+  }
+  @media (max-width: 480px) {
+    column-count: 1;
   }
 `;
 const StyledImgDiv = styled.div`
@@ -30,7 +30,7 @@ const StyledImgDiv = styled.div`
   padding: 5px;
   background-color: #fff;
   border-radius: 10px;
-  border: 5px solid #000;
+  /* border: 5px solid #000; */
   box-shadow: 0px 1px 2px -2px rgba(0, 0, 0, 0.16),
     0px 3px 6px 0px rgba(0, 0, 0, 0.12), 0px 5px 12px 4px rgba(0, 0, 0, 0.09);
   transition: all 300ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
@@ -39,6 +39,9 @@ const StyledImgDiv = styled.div`
     width: 100%;
     height: auto;
     border-radius: 10px;
+  }
+  .ant-image {
+    display: block;
   }
 
   /* @media (hover: hover) and (pointer: fine) {
@@ -56,7 +59,7 @@ const Photos = () => {
         <StyledColumnDiv>
           {lifeImages.map((item, idx) => (
             <StyledImgDiv key={idx}>
-              <Img src={item} debounce={3000} alt="React Cool Img" cache />
+              <Image src={item} alt="React Cool Img" />
             </StyledImgDiv>
           ))}
         </StyledColumnDiv>
@@ -65,7 +68,7 @@ const Photos = () => {
         <StyledColumnDiv>
           {fineFoodImages.map((item, idx) => (
             <StyledImgDiv key={idx}>
-              <Img src={item} debounce={3000} alt="React Cool Img" cache />
+              <Image src={item} alt="React Cool Img" />
             </StyledImgDiv>
           ))}
         </StyledColumnDiv>
@@ -74,7 +77,7 @@ const Photos = () => {
         <StyledColumnDiv>
           {mineImages.map((item, idx) => (
             <StyledImgDiv key={idx}>
-              <Img src={item} debounce={3000} alt="React Cool Img" cache />
+              <Image src={item} alt="React Cool Img" />
             </StyledImgDiv>
           ))}
         </StyledColumnDiv>
@@ -83,7 +86,7 @@ const Photos = () => {
         <StyledColumnDiv>
           {sceneryImages.map((item, idx) => (
             <StyledImgDiv key={idx}>
-              <Img src={item} debounce={3000} alt="React Cool Img" cache />
+              <Image src={item} alt="React Cool Img" />
             </StyledImgDiv>
           ))}
         </StyledColumnDiv>
